@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>IMDC — Architecture & Design</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@700&family=Jost:wght@200;300;400&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="progress-bar"></div>
+
+    <nav>
+        <a href="#" class="nav-logo">imdc</a>
+        <ul class="nav-links">
+            <li><a href="#about">Studio</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <canvas id="yarn-canvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Architecture &amp; Interior Design Co</p>
+            <h1 class="hero-title">Space<br/>as <em>Art</em></h1>
+            <p class="hero-sub">Gurugram &nbsp;·&nbsp;  2020</p>
+        </div>
+        <div class="scroll-cue">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <div style="height:1px;background:var(--border);"></div>
+    <section id="about">
+        <div class="about-left reveal">
+            <p class="section-label">The Studio</p>
+            <h2 class="about-heading">We design spaces<br/>that <em>breathe</em></h2>
+            <div class="about-body">
+                <p>IMDC is a multidisciplinary architecture and interior design studio rooted in the belief that great spaces hold the power to transform daily life. We work at the intersection of structure, light, and material — crafting environments that are both rigorously functional and deeply poetic.</p>
+                <p>From private residences to cultural institutions, each project begins with careful listening — to the land, to the brief, to the people who will inhabit the space.</p>
+            </div>
+            <div class="about-stats">
+                <div class="reveal">
+                    <div class="stat-num">5+</div>
+                    <div class="stat-label">Years of practice</div>
+                </div>
+                <div class="reveal">
+                    <div class="stat-num">30</div>
+                    <div class="stat-label">Projects completed</div>
+                </div>
+                
+                <!--
+                <div class="reveal">
+                    <div class="stat-num">6</div>
+                    <div class="stat-label">National awards</div>
+                </div>
+                -->
+
+                <div class="reveal">
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+        <div class="about-right reveal">
+            <div class="about-img-wrap">
+                <div class="arch-drawing">
+                    <svg width="75%" viewBox="0 0 340 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="60" y="280" width="220" height="120" stroke="rgba(255,0,127,0.35)" stroke-width="0.8"/>
+                        <rect x="80" y="200" width="180" height="80" stroke="rgba(255,0,127,0.35)" stroke-width="0.8"/>
+                        <rect x="110" y="140" width="120" height="60" stroke="rgba(255,0,127,0.28)" stroke-width="0.8"/>
+                        <line x1="170" y1="100" x2="110" y2="140" stroke="rgba(255,0,127,0.28)" stroke-width="0.8"/>
+                        <line x1="170" y1="100" x2="230" y2="140" stroke="rgba(255,0,127,0.28)" stroke-width="0.8"/>
+                        <rect x="90" y="295" width="35" height="45" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="152" y="295" width="35" height="45" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="214" y="295" width="35" height="45" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="95" y="210" width="30" height="30" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="155" y="210" width="30" height="30" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="215" y="210" width="30" height="30" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="130" y="148" width="25" height="25" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="185" y="148" width="25" height="25" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                        <rect x="152" y="330" width="35" height="70" stroke="rgba(255,0,127,0.3)" stroke-width="0.7"/>
+                        <line x1="30" y1="400" x2="310" y2="400" stroke="rgba(255,0,127,0.18)" stroke-width="0.8"/>
+                        <line x1="30" y1="280" x2="30" y2="400" stroke="rgba(255,0,127,0.12)" stroke-width="0.5" stroke-dasharray="3 3"/>
+                        <line x1="310" y1="280" x2="310" y2="400" stroke="rgba(255,0,127,0.12)" stroke-width="0.5" stroke-dasharray="3 3"/>
+                        <line x1="20" y1="280" x2="320" y2="280" stroke="rgba(255,0,127,0.12)" stroke-width="0.5" stroke-dasharray="3 3"/>
+                        <line x1="170" y1="60" x2="170" y2="420" stroke="rgba(255,0,127,0.06)" stroke-width="0.5" stroke-dasharray="2 4"/>
+                        <line x1="30" y1="340" x2="310" y2="340" stroke="rgba(255,0,127,0.06)" stroke-width="0.5" stroke-dasharray="2 4"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="projects-header reveal">
+            <div>
+                <p class="section-label">Selected Work</p>
+                <h2 class="projects-heading">Built<br/><em>visions</em></h2>
+            </div>
+            <a href="#" class="view-all">View all projects →</a>
+        </div>
+        <div class="projects-grid reveal">
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-bg proj-1">
+                        <div class="arch-svg">
+                            <svg width="60%" viewBox="0 0 300 380" fill="none">
+                                <rect x="40" y="220" width="220" height="140" stroke="rgba(255,0,127,0.3)" stroke-width="0.8"/>
+                                <rect x="60" y="150" width="180" height="70" stroke="rgba(255,0,127,0.25)" stroke-width="0.8"/>
+                                <rect x="90" y="80" width="120" height="70" stroke="rgba(255,0,127,0.2)" stroke-width="0.8"/>
+                                <line x1="40" y1="360" x2="260" y2="360" stroke="rgba(255,0,127,0.2)" stroke-width="0.8"/>
+                                <rect x="60" y="260" width="40" height="50" stroke="rgba(255,0,127,0.2)" stroke-width="0.6"/>
+                                <rect x="130" y="260" width="40" height="50" stroke="rgba(255,0,127,0.2)" stroke-width="0.6"/>
+                                <rect x="200" y="260" width="40" height="50" stroke="rgba(255,0,127,0.2)" stroke-width="0.6"/>
+                                <rect x="120" y="295" width="60" height="65" stroke="rgba(255,0,127,0.25)" stroke-width="0.7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                    <div class="project-info">
+                        <div class="project-cat">Residential</div>
+                        <div class="project-name">The Aranya House</div>
+                        <div class="project-year">2023 — New Delhi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-bg proj-2">
+                        <div class="arch-svg">
+                            <svg width="55%" viewBox="0 0 280 200" fill="none">
+                                <rect x="20" y="80" width="240" height="100" stroke="rgba(255,0,127,0.28)" stroke-width="0.8"/>
+                                <line x1="20" y1="80" x2="140" y2="20" stroke="rgba(255,0,127,0.22)" stroke-width="0.8"/>
+                                <line x1="260" y1="80" x2="140" y2="20" stroke="rgba(255,0,127,0.22)" stroke-width="0.8"/>
+                                <rect x="110" y="130" width="60" height="50" stroke="rgba(255,0,127,0.22)" stroke-width="0.6"/>
+                                <rect x="40" y="100" width="40" height="30" stroke="rgba(255,0,127,0.18)" stroke-width="0.6"/>
+                                <rect x="200" y="100" width="40" height="30" stroke="rgba(255,0,127,0.18)" stroke-width="0.6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                    <div class="project-info">
+                        <div class="project-cat">Cultural</div>
+                        <div class="project-name">Kiran Arts Pavilion</div>
+                        <div class="project-year">2022 — Mumbai</div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-bg proj-3">
+                        <div class="arch-svg">
+                            <svg width="55%" viewBox="0 0 280 200" fill="none">
+                                <circle cx="140" cy="90" r="70" stroke="rgba(255,0,127,0.25)" stroke-width="0.8"/>
+                                <circle cx="140" cy="90" r="45" stroke="rgba(255,0,127,0.18)" stroke-width="0.6"/>
+                                <circle cx="140" cy="90" r="20" stroke="rgba(255,0,127,0.15)" stroke-width="0.6"/>
+                                <line x1="140" y1="20" x2="140" y2="160" stroke="rgba(255,0,127,0.12)" stroke-width="0.5" stroke-dasharray="3 3"/>
+                                <line x1="70" y1="90" x2="210" y2="90" stroke="rgba(255,0,127,0.12)" stroke-width="0.5" stroke-dasharray="3 3"/>
+                                <rect x="20" y="160" width="240" height="20" stroke="rgba(255,0,127,0.2)" stroke-width="0.7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                    <div class="project-info">
+                        <div class="project-cat">Commercial</div>
+                        <div class="project-name">Orveda Wellness Centre</div>
+                        <div class="project-year">2023 — Bangalore</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="philosophy">
+        <div class="philosophy-inner reveal">
+            <p class="philosophy-label">Our Ethos</p>
+            <div>
+                <p class="philosophy-quote">" <strong> Teamwork makes the dream work!</strong></p>
+                <p class="philosophy-quote"> We design with you, for you." </p>
+                <p class="philosophy-body">At Ipsita Mondal design co. we aim to translate the unspoken and unexpressed without you realizing. Your investment is the project and our investment is you. We believe in getting to know you, your essence, and your personality beyond the apparent to deliver a project unique to you. We ideate and iter​​ate until we hit the nail on the head. We then follow it up with dedicated execution or management to ensure our collective vision is not compromised.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="services-left reveal">
+            <p class="section-label">What We Do</p>
+            <h2 class="services-heading">Our<br/><em>expertise</em></h2>
+        </div>
+        <div class="services-list reveal">
+            <div class="service-item">
+                <div class="service-num">01</div>
+                <div>
+                    <div class="service-name">Architecture <span class="service-arrow">→</span></div>
+                    <p class="service-desc">From concept to completion — residential, commercial, cultural, and institutional buildings designed with structural rigour and spatial grace.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-num">02</div>
+                <div>
+                    <div class="service-name">Interior Design <span class="service-arrow">→</span></div>
+                    <p class="service-desc">Environments crafted from the inside out. Material, light, furniture, and detail work in concert to create spaces that feel inevitable.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-num">03</div>
+                <div>
+                    <div class="service-name">Urban Design <span class="service-arrow">→</span></div>
+                    <p class="service-desc">Thinking beyond the building — masterplanning, streetscapes, and public realm design that strengthen the fabric of cities.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-num">04</div>
+                <div>
+                    <div class="service-name">Adaptive Reuse <span class="service-arrow">→</span></div>
+                    <p class="service-desc">Giving old structures new life. We approach heritage buildings with care, uncovering the latent possibility in every existing wall.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-num">05</div>
+                <div>
+                    <div class="service-name">Landscape <span class="service-arrow">→</span></div>
+                    <p class="service-desc">Architecture does not end at the threshold. We design gardens, courtyards, and outdoor rooms that extend the life of a building into the open air.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="reveal">
+            <p class="section-label" style="justify-content:center;">The People</p>
+            <h2 class="team-heading">Minds behind<br/>the <em>work</em></h2>
+        </div>
+        <div class="team-grid reveal">
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-card-bg t1">
+                        <div class="team-portrait">I</div>
+                    </div>
+                    <div class="team-overlay"></div>
+                    <div class="team-info">
+                        <div class="team-name">Ishaan Mehta</div>
+                        <div class="team-role">Founding Principal</div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-card-bg t2">
+                        <div class="team-portrait">M</div>
+                    </div>
+                    <div class="team-overlay"></div>
+                    <div class="team-info">
+                        <div class="team-name">Meera Deshpande</div>
+                        <div class="team-role">Design Director</div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-card-bg t3">
+                        <div class="team-portrait">D</div>
+                    </div>
+                    <div class="team-overlay"></div>
+                    <div class="team-info">
+                        <div class="team-name">Dev Srinivas</div>
+                        <div class="team-role">Technical Lead</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact">
+        <div class="contact-inner">
+            <div class="reveal">
+                <p class="section-label">Get in Touch</p>
+                <h2 class="contact-heading">Let's build<br/>something <em>lasting</em></h2>
+                <p class="contact-body">We take on a limited number of projects each year to ensure every client receives our full attention. We'd love to hear about yours.</p>
+                <div class="contact-detail">
+                    <div class="contact-row">
+                        <span class="contact-key">Ipsita Mondal Design Co</span>
+                        <span class="contact-val">365-B, Block C, Sushant Lok 1 — 122001</span>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-key">Email</span>
+                        <span class="contact-val">hello@imds.in</span>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-key">Phone</span>
+                        <span class="contact-val">+91 9999996666</span>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal">
+                <form class="contact-form" onsubmit="return false;">
+                    <div class="form-field">
+                        <input type="text" placeholder=" " id="f-name"/>
+                        <label for="f-name">Full Name</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="email" placeholder=" " id="f-email"/>
+                        <label for="f-email">Email Address</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" placeholder=" " id="f-project"/>
+                        <label for="f-project">Project Type</label>
+                    </div>
+                    <div class="form-field">
+                        <textarea rows="4" placeholder=" " id="f-msg"></textarea>
+                        <label for="f-msg">Tell us about your project</label>
+                    </div>
+                    <button class="btn-submit" type="submit">
+                        <span>Send enquiry</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#" class="footer-logo">imds</a>
+        <p class="footer-copy">© 2024 IMDS Architecture &amp; Design. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Dezeen</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+</body>
+</html>
